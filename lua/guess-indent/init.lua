@@ -105,7 +105,7 @@ end
 ---@param indentation integer|"tabs"? the number of spaces to indent or "tabs"
 ---@param bufnr integer? the buffer to set the indentation for (default is current buffer)
 ---@param silent boolean? whether or not to skip notification of change
-local function set_indentation(indentation, bufnr, silent)
+function M.set_indentation(indentation, bufnr, silent)
   bufnr = bufnr or vim.api.nvim_get_current_buf()
 
   local notification = "Failed to detect indentation style."
